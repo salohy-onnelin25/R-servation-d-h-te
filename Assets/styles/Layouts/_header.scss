@@ -1,0 +1,61 @@
+header {
+    background: $black;
+    color: $white;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 20px;
+    h1 {
+        font-size: clamp(1rem, 2.5vw, 3rem);
+        text-transform: uppercase;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 40px;
+        a {
+            color: $white;
+            font-size: clamp(1rem, 1.5vw, 2rem);
+        }
+        li {
+            position: relative; 
+        }
+        
+        .contact-panel,
+        .portfolio-panel {
+            position: absolute;
+            top: 0; 
+            right: 0; 
+            background: $black; 
+            border-radius: 0 10px px;
+            color: $white;
+            padding: 10px;
+            min-width: 200px;
+            opacity: 0; 
+            visibility: hidden; 
+    
+            transition: top 0.3s ease-out, opacity 0.3s ease-out, visibility 0s 0.3s;
+            z-index: 1000; 
+
+            
+            p {
+                margin-bottom: 5px;
+            }
+            .mail-link,
+            .portfolio-link {
+                color: $white;
+                text-decoration: underline;
+                display: block;
+            }
+        }
+
+        
+        .contact-trigger:hover .contact-panel,
+        .portfolio-trigger:hover .portfolio-panel {
+            top: 250%; 
+            opacity: 1; 
+            visibility: visible; 
+            transition: top 0.3s ease-out, opacity 0.3s ease-out, visibility 0s 0s; 
+        }
+    }
+}

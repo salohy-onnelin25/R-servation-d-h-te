@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+@mixin background-img($url, $size: cover, $position: center, $repeat: no-repeat) {
+    background-image: url(#{$url});
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+
+$white: white;
+$black: black;
+$gray: rgba(128, 128, 128, 0.795);
+$selected-color: #4caf50;
+
+body {
+    @include background-img("../Imgs/1128.jpg", cover, center, no-repeat);
+    display: flex; 
+    flex-direction: column;
+}

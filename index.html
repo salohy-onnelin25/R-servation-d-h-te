@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andakoro City | Réservation de Séjour et Hôtels</title>
+    <meta
+      name="description"
+      content="Réservez votre séjour dans la belle ville d'Andakoro. Tarifs de nuitée abordables et confirmation instantanée. Contactez-nous pour plus d'informations."
+    />
+    <meta
+      name="keywords"
+      content="Andakoro, réservation hôtel, séjour Andakoro, hébergement, voyage, tourisme"
+    />
+    <meta property="og:title" content="Andakoro City | Réservation de Séjour" />
+    <meta
+      property="og:description"
+      content="Réservez votre séjour dans la belle ville d'Andakoro. Tarifs de nuitée abordables et confirmation instantanée."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="[Your Live Website URL Here]" />
+    <link rel="shortcut icon" href="./Assets/Imgs/5679222.png">
+    <link rel="stylesheet" href="./Assets/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Andakoro city</h1>
+      <nav>
+        <ul>
+          <li class="contact-trigger">
+            <a
+              href="mailto:salohyonnelin@gmail.com"
+              title="Contacter par email"
+            >
+              <i class="fa-solid fa-comments"></i>
+            </a>
+            <div id="contactPanel" class="contact-panel">
+              <p>Contactez-moi :</p>
+              <a href="mailto:salohyonnelin@gmail.com" class="mail-link">
+                salohyonnelin@gmail.com
+              </a>
+            </div>
+          </li>
+          <li class="portfolio-trigger">
+            <a
+              href="https://salohy-onnelin25.github.io/Mon-portfolio/"
+              target="_blank"
+              title="Visiter mon Portfolio"
+            >
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <div id="portfolioPanel" class="portfolio-panel">
+              <a
+                href="https://salohy-onnelin25.github.io/Mon-portfolio/"
+                target="_blank"
+                class="portfolio-link"
+              >
+                Visiter mon Portfolio
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="reservation-container">
+        <h2>Reservation</h2>
+
+        <div class="date-selection">
+          <div class="date-group">
+            <label for="arrival-date">Date d'arriver:</label>
+            <input type="date" id="arrival-date" min="" required />
+          </div>
+          <div class="date-group">
+            <label for="departure-date">Date de départ:</label>
+            <input type="date" id="departure-date" min="" required />
+          </div>
+        </div>
+
+        <div class="pricing-summary">
+          <h2>💰 Prix détails</h2>
+          <p>Prix nuitée: 100 000Ar</p>
+          <p>Nombre de nuit: <span id="num-nights">0</span></p>
+          <p>Total de séjour: <span id="total-price">0</span>Ar</p>
+        </div>
+
+        <button id="reserve-button" disabled>
+          Confirmation de Reservation
+        </button>
+
+        <div class="payment-info">
+          <h2>💳 (Mvola)</h2>
+          <p>Veuillez payer au :</p>
+          <p class="orange-money-number">📞 034 10 044 85</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./Assets/Js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+main {
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    .reservation-container {
+        background-color: #ffffff80;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 450px;
+        width: 90%;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    }
+
+    .date-selection {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        @media (max-width: 437px){
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+
+    .date-group {
+        flex: 1;
+        margin-right: 15px;
+        @media (max-width: 437px){
+            margin-right: 0;
+        }
+    }
+
+    .date-group:last-child {
+        margin-right: 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    /* --- Pricing and Payment Styles --- */
+
+    .pricing-summary p,
+    .payment-info p {
+        margin: 8px 0;
+        font-size: 1.1em;
+    }
+
+    .orange-money-number {
+        font-size: 1.3em;
+        color: #ff6600; /* Orange color for Orange Money */
+        text-align: center;
+        padding: 10px;
+        background-color: #fff0e0;
+        border-radius: 6px;
+        margin: 15px 0;
+        font-weight: bold;
+    }
+
+    .note {
+        font-size: 0.9em;
+        color: #777;
+        border-top: 1px dashed #ccc;
+        padding-top: 10px;
+        margin-top: 20px;
+    }
+
+    /* --- Button Style --- */
+
+    #reserve-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745; /* Green for confirmation */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 15px;
+    }
+
+    #reserve-button:hover:not(:disabled) {
+        background-color: #218838;
+    }
+
+    #reserve-button:disabled {
+        background-color: #90ee90;
+        cursor: not-allowed;
+    }
+}
