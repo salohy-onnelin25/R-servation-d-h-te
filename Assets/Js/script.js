@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // CORRECTION 1: Update the nightly price to match the HTML (100,000 Ar)
   const NIGHTLY_PRICE = 100000;
   const PRICE_DISPLAY_ELEMENT = document.getElementById("total-price");
   const NIGHTS_DISPLAY_ELEMENT = document.getElementById("num-nights");
@@ -40,15 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPrice = numberOfNights * NIGHTLY_PRICE;
 
     NIGHTS_DISPLAY_ELEMENT.textContent = numberOfNights;
-    // CORRECTION 2: Set the text content of the price display element (total-price)
-    // Use toLocaleString for proper number formatting (e.g., 100 000.00)
     PRICE_DISPLAY_ELEMENT.textContent = totalPrice.toLocaleString("fr-FR", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
 
     RESERVE_BUTTON.disabled = false;
-    // Correct the currency symbol and remove the dollar sign
     RESERVE_BUTTON.textContent = `Confirmation de Reservation pour ${PRICE_DISPLAY_ELEMENT.textContent} Ar`;
   }
 
@@ -66,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   RESERVE_BUTTON.addEventListener("click", () => {
     const nights = NIGHTS_DISPLAY_ELEMENT.textContent;
     const price = PRICE_DISPLAY_ELEMENT.textContent;
-    // Correct the alert message to use the price variable correctly and include "Ar"
     alert(
       `Confirmation de réservation ! Vous réservez pour ${nights} nuitées pour un montant total de ${price} Ar. Veuillez procéder au paiement par Orange Money de ${price} Ar au 037 05 919 33 pour finaliser votre réservation.`
     );
